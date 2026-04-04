@@ -2,6 +2,7 @@
 
 # Bluetooth Low Energy communication
 bleak>=0.21.0
+streamlit>=1.56.0
 
 # No other dependencies required!
 # The library uses only Python standard library modules:

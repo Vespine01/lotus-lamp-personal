@@ -1,14 +1,21 @@
-from lotus_control import main
+from lotus_control import red
+from lotus_control import blue
+from lotus_control import green
 import streamlit as st
 
-st.header("Input Elements")
+st.header("Back Stage Light Options")
 
-st.subheader("Light Options")
+option_red = st.button("Red")
+option_blue = st.button("Blue")
+option_green = st.button("Green")
 
-button_clicked = st.button("Test")
+if option_red:
+    asyncio.run(red())
 
-if button_clicked:
-    asyncio.run(main())
+if option_blue:
+    asyncio.run(blue())
 
-st.divider()
+if option_green:
+    asyncio.run(green())
+
 
