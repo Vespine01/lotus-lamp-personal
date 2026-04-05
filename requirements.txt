@@ -1,8 +1,9 @@
-# Lotus Lamp Python Library Dependencies
+# Lotus Lamp Python Library Plus Dependencies
 
-# Bluetooth Low Energy communication
+# Bluetooth Low Energy communication, 
 bleak>=0.21.0
 streamlit>=1.56.0
+lotus_lamp>=1.1.0
 
 # No other dependencies required!
 # The library uses only Python standard library modules:
