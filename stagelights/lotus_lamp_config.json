@@ -1,0 +1,12 @@
+{
+  "devices": [
+    {
+      "name": "StagelightRight",
+      "address": "BE:16:FF:00:01:A5"
+    },
+    {
+      "name": "StagelightLeft",
+      "address": "BE:16:FF:00:0B:5A"
+    }
+  ]
+}

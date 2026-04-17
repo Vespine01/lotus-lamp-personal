@@ -8,8 +8,6 @@ from a single configuration file.
 
 import asyncio
 from lotus_lamp import LotusLamp
-import stagelights_connection  # Ensure this is imported to load configs
-
 
 async def control_multiple_lamps():
     """Example of controlling multiple lamps"""
