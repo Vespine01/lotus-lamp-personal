@@ -4,6 +4,7 @@
 bleak>=0.21.0
 streamlit>=1.56.0
 lotus_lamp>=1.1.0
+setuptools>=82.0.1
 
 # No other dependencies required!
 # The library uses only Python standard library modules:
