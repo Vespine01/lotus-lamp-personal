@@ -1,73 +1,44 @@
 import asyncio
 from lotus_lamp import LotusLamp
-from stagelights_connection import lamp
+from stagelight_connection import lamp, lamps
+from stagelight_connection import connect_lamps
 
 async def red():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to red
-    await lamp.set_rgb(255, 0, 0)
+    print("\nSetting all lamps to red...")
+    await asyncio.gather(*[lamp.set_rgb(255, 0, 0) for lamp in lamps])
 
 async def blue():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to blue
-    await lamp.set_rgb(0, 0, 255)
+    print("\nSetting all lamps to blue...")
+    await asyncio.gather(*[lamp.set_rgb(0, 0, 255) for lamp in lamps])
 
 async def green():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to green
-    await lamp.set_rgb(0, 255, 0)
+    print("\nSetting all lamps to green...")
+    await asyncio.gather(*[lamp.set_rgb(0, 255, 0) for lamp in lamps])
 
 async def white():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to white
-    await lamp.set_rgb(255, 255, 255)
+    print("\nSetting all lamps to white...")
+    await asyncio.gather(*[lamp.set_rgb(255, 255, 255) for lamp in lamps])
 
 async def yellow():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to yellow
-    await lamp.set_rgb(255, 255, 0)
+    print("\nSetting all lamps to yellow...")
+    await asyncio.gather(*[lamp.set_rgb(255, 255, 0) for lamp in lamps])
 
 async def purple():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to purple
-    await lamp.set_rgb(128, 0, 128)
+    print("\nSetting all lamps to purple...")
+    await asyncio.gather(*[lamp.set_rgb(128, 0, 128) for lamp in lamps])
 
 async def orange():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to orange
-    await lamp.set_rgb(255, 165, 0)
+    print("\nSetting all lamps to orange...")
+    await asyncio.gather(*[lamp.set_rgb(255, 165, 0) for lamp in lamps])
 
 async def pink():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to pink
-    await lamp.set_rgb(255, 192, 203)
+    print("\nSetting all lamps to pink...")
+    await asyncio.gather(*[lamp.set_rgb(255, 192, 203) for lamp in lamps])
 
 async def cyan():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Set color to cyan
-    await lamp.set_rgb(0, 255, 255)
+    print("\nSetting all lamps to cyan...")
+    await asyncio.gather(*[lamp.set_rgb(0, 255, 255) for lamp in lamps])
 
 async def off():
-    # Connect to lamp
-    await lamp.connect()
-
-    # Turn off lamp
-    await lamp.set_rgb(0, 0, 0)
+    print("\nTurning all lamps off...")
+    await asyncio.gather(*[lamp.set_rgb(0, 0, 0) for lamp in lamps])

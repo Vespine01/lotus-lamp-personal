@@ -121,7 +121,7 @@ async def simple_multi_lamp_example():
     """Simpler example with error handling"""
 
     # List of lamp names from your config
-    lamp_names = ["StageLightRight", "StageLightLeft"]
+    lamp_names = ["StagelightRight", "StagelightLeft"]
 
     # Connect to all lamps
     lamps = []
