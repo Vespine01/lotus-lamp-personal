@@ -10,9 +10,6 @@ st.header("Stage Light Options")
 if st.button("Connect to Lamps"):
     print("Connecting to stagelights...")
     asyncio.run(stagelight_connection.connect_lamps())
-    
-    if not stagelight_connection.connected:
-        st.error("Failed to connect to any lamps. Please check Connection Log and try again.")
 
 
 if st.button("Red"):
