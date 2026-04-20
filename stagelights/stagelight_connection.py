@@ -32,7 +32,7 @@ async def connect_lamps():
         print("No lamps connected! Error with config or Bluetooth?")
         connected = False
         return
-    
+
     
     print("Testing connection by setting all lamps to white...")
     await asyncio.gather(*[lamp.set_rgb(240, 240, 240) for lamp in lamps])
