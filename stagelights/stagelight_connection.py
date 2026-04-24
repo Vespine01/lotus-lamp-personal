@@ -35,7 +35,9 @@ async def connect_lamps():
 
     
     print("Testing connection by setting all lamps to white...")
+    await asyncio.gather(*[lamp.set_rgb(0, 0, 0) for lamp in lamps])
     await asyncio.gather(*[lamp.set_rgb(240, 240, 240) for lamp in lamps])
 
     print("=" * 40)
     print()
+    

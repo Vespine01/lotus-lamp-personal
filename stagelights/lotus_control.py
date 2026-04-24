@@ -1,9 +1,18 @@
 import asyncio
+from lotus_lamp.controller import LotusLamp
 import stagelight_connection
 
 async def red():
     print("\nSetting all lamps to red...")
-    await asyncio.gather(*[lamp.set_rgb(255, 0, 0) for lamp in stagelight_connection.lamps])
+    lamp_names = ["StagelightRight", "StagelightLeft"]
+
+    # Connect to all lamps
+    lamps = []
+    for name in lamp_names:
+        lamp = LotusLamp(device_name=name)
+        lamps.append(lamp)
+
+    await asyncio.gather(*[lamp.set_rgb(255, 0, 0) for lamp in lamps])
 
 async def blue():
     print("\nSetting all lamps to blue...")
